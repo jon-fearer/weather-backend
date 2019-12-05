@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "athena-express": "^4.0.2",
+    "athena-express": "^5.1.1",
     "aws-sdk": "^2.435.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
