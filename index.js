@@ -1,16 +1,16 @@
 const express = require('express');
 const cors = require('cors');
-let app = express();
-
-const aws = require('aws-sdk');
-aws.config.update({region: 'us-east-1'});
+const app = express();
+const AWS = require('aws-sdk');
 const AthenaExpress = require('athena-express');
 
+AWS.config.update({region: 'us-east-1'});
+
 const athenaExpressConfig = {
-	aws,
+	aws: AWS,
 	s3: 's3://aws-athena-query-results-528165410097-us-east-1',
 	db: 'weather',
-	getStats: true
+	getStats: true,
 };
 
 const athenaExpress = new AthenaExpress(athenaExpressConfig);
